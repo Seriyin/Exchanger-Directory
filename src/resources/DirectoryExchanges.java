@@ -7,7 +7,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.AbstractMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -26,12 +28,11 @@ public class DirectoryExchanges
 
 
     @GET
-    public Map<String, String> getExchanges() {
+    public Map<String, Set<String>> getExchanges() {
         return exchanges.getExchanges()
                  .entrySet()
                  .stream()
-                 .map(e -> new AbstractMap.SimpleImmutableEntry<String,String>(e.getKey(), e.getValue().getName()))
-                 .collect(Collectors.toMap(AbstractMap.SimpleImmutableEntry::getKey,
-                                           AbstractMap.SimpleImmutableEntry::getValue));
+                 .map(e -> new AbstractMap.SimpleImmutableEntry<>(e.getKey(), e.getValue().getCompanies().keySet()))
+                 .collect(Collectors.toMap(AbstractMap.SimpleImmutableEntry::getKey, AbstractMap.SimpleImmutableEntry::getValue));
     }
 }
