@@ -3,33 +3,21 @@ import io.dropwizard.Configuration;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
- * Description.
+ * DirectoryConfig loads up the exchanges known from the YAML config file provided.
  */
 public class DirectoryConfig extends Configuration
 {
     @NotEmpty
-    private String template;
-
-    @NotEmpty
-    private String defaultName = "Stranger";
+    private Exchanges exchanges;
 
     @JsonProperty
-    public String getTemplate() {
-        return template;
+    public Exchanges getExchanges() {
+        return exchanges;
     }
 
     @JsonProperty
-    public void setTemplate(String template) {
-        this.template = template;
+    public void setExchanges(Exchanges exchanges) {
+        this.exchanges = exchanges;
     }
 
-    @JsonProperty
-    public String getDefaultName() {
-        return defaultName;
-    }
-
-    @JsonProperty
-    public void setDefaultName(String name) {
-        this.defaultName = name;
-    }
 }
