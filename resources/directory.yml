@@ -2,52 +2,80 @@ exchanges:
   PSI-3 :
     online : false
     name : PSI-3
+    at : null
     companies :
       SONAC :
         name : SONAC
         live : false
+        yesterday : null
+        today : null
       JeriamoMarts :
         name : JeriamoMarts
         live : false
+        yesterday : null
+        today : null
       MotaAngil :
         name : MotaAngil
         live : false
+        yesterday : null
+        today : null
   DawJobes :
     online : false
     name : DawJobes
+    at : null
     companies :
       Apple :
         name : Apple
         live : false
+        yesterday : null
+        today : null
       Samsung :
         name : Samsung
         live : false
+        yesterday : null
+        today : null
       Google :
         name : Google
         live : false
+        yesterday : null
+        today : null
   AsiaWest :
     online : false
     name : AsiaWest
+    at : null
     companies :
       RussiOil :
         name : RussiOil
         live : false
+        yesterday : null
+        today : null
       IndiaGP :
         name : IndiaGP
         live : false
+        yesterday : null
+        today : null
       ShenzenCorp :
         name : ShenzenCorp
         live : false
+        yesterday : null
+        today : null
   AsiaEast :
     online : false
     name : AsiaEast
+    at : null
     companies :
       Nissan :
         name : Nissan
         live : false
+        yesterday : null
+        today : null
       Toyota :
         name : Toyota
         live : false
+        yesterday : null
+        today : null
       Mazda :
         name : Mazda
         live : false
+        yesterday : null
+        today : null
