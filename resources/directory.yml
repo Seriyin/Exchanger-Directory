@@ -1,0 +1,53 @@
+exchanges:
+  PSI-3 :
+    online : false
+    name : PSI-3
+    companies :
+      SONAC :
+        name : SONAC
+        live : false
+      JeriamoMarts :
+        name : JeriamoMarts
+        live : false
+      MotaAngil :
+        name : MotaAngil
+        live : false
+  DawJobes :
+    online : false
+    name : DawJobes
+    companies :
+      Apple :
+        name : Apple
+        live : false
+      Samsung :
+        name : Samsung
+        live : false
+      Google :
+        name : Google
+        live : false
+  AsiaWest :
+    online : false
+    name : AsiaWest
+    companies :
+      RussiOil :
+        name : RussiOil
+        live : false
+      IndiaGP :
+        name : IndiaGP
+        live : false
+      ShenzenCorp :
+        name : ShenzenCorp
+        live : false
+  AsiaEast :
+    online : false
+    name : AsiaEast
+    companies :
+      Nissan :
+        name : Nissan
+        live : false
+      Toyota :
+        name : Toyota
+        live : false
+      Mazda :
+        name : Mazda
+        live : false
