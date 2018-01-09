@@ -37,6 +37,17 @@ public class Company
     }
 
     @JsonProperty
+    public Stats getYesterday()
+    {
+        return yesterday;
+    }
+
+    @JsonProperty
+    public Stats getToday()
+    {
+        return today;
+    }
+
     public Stats getStats(boolean current) {
         Stats result;
         if(current) {
@@ -44,5 +55,15 @@ public class Company
         }
         else
             return yesterday;
+    }
+
+    public CompanyDay createDay(boolean current)
+    {
+        if(current) {
+            return new CompanyDay(name, getToday());
+        }
+        else{
+            return new CompanyDay(name, getYesterday());
+        }
     }
 }
