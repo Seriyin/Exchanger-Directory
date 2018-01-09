@@ -6,20 +6,14 @@ import io.dropwizard.setup.Environment;
 import java.util.HashMap;
 
 /**
- * Description.
+ * DirectoryApp registers Jersey resources and static asset bundles.
  */
 public class DirectoryApp extends Application<DirectoryConfig>
 {
-/*    private Departments deps;
-    private Employees emps;
-*/
+    private Exchanges exchanges;
+
     public static void main(String[] args) throws Exception {
         new DirectoryApp().run(args);
-    }
-
-    @Override
-    public String getName() {
-        return "hello-world";
     }
 
     @Override
@@ -31,22 +25,23 @@ public class DirectoryApp extends Application<DirectoryConfig>
     @Override
     public void run(DirectoryConfig configuration,
                     Environment environment) {
+        //Set exchanges
+        setExchanges(configuration.getExchanges());
+        //Set api url pattern.
         environment.jersey().setUrlPattern("/api/*");
-/*        final DepartmentsResource depsr = new DepartmentsResource(deps);
-        final EmployeesResource empsr = new EmployeesResource(emps);
-        final DepartmentResource depr = new DepartmentResource(deps);
-        final DepartmentEmployeeResource depempr = new DepartmentEmployeeResource(deps,emps);
-        final DepartmentEmployeesResource depempsr = new DepartmentEmployeesResource(deps);
-        environment.jersey().register(depsr);
-        environment.jersey().register(empsr);
-        environment.jersey().register(depr);
-        environment.jersey().register(depempr);
-        environment.jersey().register(depempsr);
-*/    }
+        //resource declarations
+        final DirectoryExchanges direx;
+        direx = new DirectoryExchanges(exchanges);
+        //environment registrations.
+        environment.jersey().register(direx);
+    }
 
     public DirectoryApp() {
-        /*deps = new Departments(new HashMap<String,Department>());
-        emps = new Employees(new HashMap<Long,Employee>());
-    */}
+        exchanges = null;
+    }
 
+    public void setExchanges(Exchanges exchanges)
+    {
+        this.exchanges = exchanges;
+    }
 }
