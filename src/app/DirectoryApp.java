@@ -1,9 +1,11 @@
+package app;
+
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-
-import java.util.HashMap;
+import model.Exchanges;
+import resources.DirectoryExchanges;
 
 /**
  * DirectoryApp registers Jersey resources and static asset bundles.

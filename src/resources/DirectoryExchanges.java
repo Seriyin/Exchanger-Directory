@@ -1,8 +1,11 @@
+package resources;
+
+import model.Exchanges;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import java.net.InetSocketAddress;
 import java.util.AbstractMap;
 import java.util.Map;
 import java.util.stream.Collectors;

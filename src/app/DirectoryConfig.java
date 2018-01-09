@@ -1,5 +1,8 @@
+package app;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
+import model.Exchanges;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**

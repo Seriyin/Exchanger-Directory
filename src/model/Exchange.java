@@ -1,6 +1,7 @@
+package model;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.util.Map;
 
