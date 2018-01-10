@@ -24,18 +24,18 @@ exchanges:
     name : DawJobes
     at : null
     companies :
-      Apple :
+      Arple :
         name : Apple
         live : false
         yesterday : null
         today : null
-      Samsung :
+      Samshung :
         name : Samsung
         live : false
         yesterday : null
         today : null
-      Google :
-        name : Google
+      Geggle :
+        name : Geggle
         live : false
         yesterday : null
         today : null
@@ -64,18 +64,18 @@ exchanges:
     name : AsiaEast
     at : null
     companies :
-      Nissan :
-        name : Nissan
+      Nisun :
+        name : Nisun
         live : false
         yesterday : null
         today : null
-      Toyota :
-        name : Toyota
+      Tayato :
+        name : Tayato
         live : false
         yesterday : null
         today : null
-      Mazda :
-        name : Mazda
+      Nazta :
+        name : Nazta
         live : false
         yesterday : null
         today : null
