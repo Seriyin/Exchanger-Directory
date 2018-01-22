@@ -46,7 +46,7 @@ Directory must:
 
 ### Archiving ###
 
-Archive only the previous day and thrash the archive on trade closing time daily.
+Archive only the previous day and thrash the archive on trade opening time daily.
 
 -----
 
