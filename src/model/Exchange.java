@@ -1,5 +1,6 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.net.InetSocketAddress;
@@ -16,16 +17,22 @@ public class Exchange
     private String name;
     private Map<String,Company> companies;
 
+    @JsonCreator
+    public Exchange(@JsonProperty("online") boolean online,
+                    @JsonProperty("at") InetSocketAddress at,
+                    @JsonProperty("name") String name,
+                    @JsonProperty("companies") Map<String, Company> companies)
+    {
+        this.online = online;
+        this.at = at;
+        this.name = name;
+        this.companies = companies;
+    }
+
     @JsonProperty
     public boolean isOnline()
     {
         return online;
-    }
-
-    @JsonProperty
-    public void setOnline(boolean online)
-    {
-        this.online = online;
     }
 
     @JsonProperty
@@ -35,20 +42,9 @@ public class Exchange
     }
 
     @JsonProperty
-    public void setAt(InetSocketAddress at) {
-        this.at = at;
-    }
-
-    @JsonProperty
     public String getName()
     {
         return name;
-    }
-
-    @JsonProperty
-    public void setName(String name)
-    {
-        this.name = name;
     }
 
     @JsonProperty
@@ -57,9 +53,8 @@ public class Exchange
         return companies;
     }
 
-    @JsonProperty
-    public void setCompanies(Map<String, Company> companies)
-    {
-        this.companies = companies;
+    public void goOnline(Address ad) {
+        online = true;
+        at = new InetSocketAddress(ad.getHost(), ad.getPort());
     }
 }
