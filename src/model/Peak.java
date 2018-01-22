@@ -1,5 +1,6 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -10,7 +11,9 @@ public class Peak
     private double peakPricePerStock;
     private long pricePeakTime;
 
-    public Peak(double peakPricePerStock, long pricePeakTime)
+    @JsonCreator
+    public Peak(@JsonProperty("peakPricePerStock") double peakPricePerStock,
+                @JsonProperty("pricePeakTime") long pricePeakTime)
     {
         this.peakPricePerStock = peakPricePerStock;
         this.pricePeakTime = pricePeakTime;
@@ -39,5 +42,17 @@ public class Peak
             peakPricePerStock = price;
             pricePeakTime = time;
         }
+    }
+
+    @JsonProperty
+    public double getPeakPricePerStock()
+    {
+        return peakPricePerStock;
+    }
+
+    @JsonProperty
+    public long getPricePeakTime()
+    {
+        return pricePeakTime;
     }
 }

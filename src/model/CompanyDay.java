@@ -1,5 +1,6 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
@@ -10,7 +11,9 @@ public class CompanyDay
     private Stats day;
     private String name;
 
-    public CompanyDay(String name, Stats day)
+    @JsonCreator
+    public CompanyDay(@JsonProperty("name") String name,
+                      @JsonProperty("day") Stats day)
     {
         this.day = day;
         this.name = name;
