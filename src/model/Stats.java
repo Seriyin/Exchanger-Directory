@@ -68,4 +68,16 @@ public class Stats
     {
         this.closingPrice = closingPrice;
     }
+
+    @JsonProperty
+    public void setLowPeak(Peak lowPeak)
+    {
+        this.lowPeak = lowPeak;
+    }
+
+    @JsonProperty
+    public void setHighPeak(Peak highPeak)
+    {
+        this.highPeak = highPeak;
+    }
 }
