@@ -6,17 +6,14 @@ exchanges:
     companies :
       SONAC :
         name : SONAC
-        live : false
         yesterday : null
         today : null
       JeriamoMarts :
         name : JeriamoMarts
-        live : false
         yesterday : null
         today : null
       MotaAngil :
         name : MotaAngil
-        live : false
         yesterday : null
         today : null
   DawJobes :
@@ -26,17 +23,14 @@ exchanges:
     companies :
       Arple :
         name : Apple
-        live : false
         yesterday : null
         today : null
       Samshung :
         name : Samsung
-        live : false
         yesterday : null
         today : null
       Geggle :
         name : Geggle
-        live : false
         yesterday : null
         today : null
   AsiaWest :
@@ -46,17 +40,14 @@ exchanges:
     companies :
       RussiOil :
         name : RussiOil
-        live : false
         yesterday : null
         today : null
       IndiaGP :
         name : IndiaGP
-        live : false
         yesterday : null
         today : null
       ShenzenCorp :
         name : ShenzenCorp
-        live : false
         yesterday : null
         today : null
   AsiaEast :
@@ -66,16 +57,13 @@ exchanges:
     companies :
       Nisun :
         name : Nisun
-        live : false
         yesterday : null
         today : null
       Tayato :
         name : Tayato
-        live : false
         yesterday : null
         today : null
       Nazta :
         name : Nazta
-        live : false
         yesterday : null
         today : null
