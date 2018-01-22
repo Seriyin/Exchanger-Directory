@@ -4,6 +4,8 @@ import io.dropwizard.servlets.assets.ResourceNotFoundException;
 import model.Address;
 import model.Exchanges;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -40,7 +42,7 @@ public class DirectoryExchanges
     }
 
     @PUT
-    public Response updateExchanges(Address ex) {
+    public Response updateExchanges(@Valid @NotNull Address ex) {
         Response ret;
         if (exchanges.getExchanges().containsKey(ex.getName()))
         {

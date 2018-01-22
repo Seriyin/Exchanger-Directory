@@ -6,6 +6,8 @@ import model.Exchange;
 import model.Exchanges;
 import model.TradeCompleted;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -48,7 +50,7 @@ public class DirectoryStats
     @PUT
     public Response updateCompanyTrades(@PathParam("name") String name,
                                         @PathParam("company") String company,
-                                        TradeCompleted tc)
+                                        @Valid @NotNull TradeCompleted tc)
     {
         if(name.equals(tc.getExchange()) &&
            company.equals(tc.getCompany()))
