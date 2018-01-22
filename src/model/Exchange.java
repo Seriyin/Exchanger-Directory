@@ -53,8 +53,16 @@ public class Exchange
         return companies;
     }
 
-    public void goOnline(Address ad) {
-        online = true;
-        at = new InetSocketAddress(ad.getHost(), ad.getPort());
+
+    public void statusUpdate(Address ex)
+    {
+        if(ex.getHost().equals("exit"))
+        {
+            online = false;
+        }
+        else {
+            online = true;
+            at = new InetSocketAddress(ex.getHost(), ex.getPort());
+        }
     }
 }
