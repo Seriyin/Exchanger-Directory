@@ -1,11 +1,13 @@
 package resources;
 
+import io.dropwizard.servlets.assets.ResourceNotFoundException;
+import model.Address;
 import model.Exchanges;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
 import java.util.AbstractMap;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +19,7 @@ import java.util.stream.Collectors;
  */
 @Path("/exchanges")
 @Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class DirectoryExchanges
 {
     private Exchanges exchanges;
@@ -34,5 +37,18 @@ public class DirectoryExchanges
                  .stream()
                  .map(e -> new AbstractMap.SimpleImmutableEntry<>(e.getKey(), e.getValue().getCompanies().keySet()))
                  .collect(Collectors.toMap(AbstractMap.SimpleImmutableEntry::getKey, AbstractMap.SimpleImmutableEntry::getValue));
+    }
+
+    @PUT
+    public Response updateExchanges(Address ex) {
+        Response ret;
+        if (exchanges.getExchanges().containsKey(ex.getName()))
+        {
+            exchanges.getExchanges().get(ex.getName()).statusUpdate(ex);
+            ret = Response.accepted(UriBuilder.fromResource(DirectoryExchanges.class)
+                                              .build())
+                          .build();
+        }
+        throw new ResourceNotFoundException(new WebApplicationException());
     }
 }
