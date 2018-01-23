@@ -77,12 +77,15 @@ public class Company
     public void updateStats(TradeCompleted tc)
     {
         if(isLive()) {
-            if (today.getHighPeak()
-                     .getPeakPricePerStock() > tc.getPeak())
+            if (tc.isLowOrHigh() &&
+                today.getHighPeak()
+                     .getPeakPricePerStock() < tc.getPeak())
             {
-                today.registerPeakLow(tc.getPeak(), tc.getTimestamp());
+                today.registerPeakHigh(tc.getPeak(), tc.getTimestamp());
             }
-            else
+            else if (!tc.isLowOrHigh() &&
+                     today.getLowPeak()
+                          .getPeakPricePerStock() > tc.getPeak())
             {
                 today.registerPeakHigh(tc.getPeak(), tc.getTimestamp());
             }
