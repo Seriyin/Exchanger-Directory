@@ -12,6 +12,7 @@ Java financial exchange REST directory over [Dropwizard](www.dropwizard.io).
         - [Live-Monitoring](#live-monitoring)
         - [Archiving](#archiving)
         - [Listing service](#listing-service)
+    - [Installation](#installation)
     - [Dependencies](#dependencies)
 
 -----
@@ -57,6 +58,22 @@ For current and previous days, allow GET requests for archived or live informati
 Directory must:
 
 - Keep GET urls for information retrieval as [described here](https://github.com/Seriyin/Exchanger-Client#client---directory).
+
+-----
+
+## Installation ##
+   
+Run
+
+>*$>* mvn install
+
+for local repo install or 
+
+>*$>* mvn package
+
+for .jar generation only in main directory pom.xml.
+
+-----
 
 ## Dependencies ##
 
