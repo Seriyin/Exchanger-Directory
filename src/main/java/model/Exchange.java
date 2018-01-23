@@ -56,7 +56,7 @@ public class Exchange
 
     public void statusUpdate(Address ex)
     {
-        if(ex.getHost().equals("exit"))
+        if(ex.getHost().equals("clean exit"))
         {
             online = false;
         }
