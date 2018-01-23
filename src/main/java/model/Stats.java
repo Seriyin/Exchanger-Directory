@@ -23,13 +23,17 @@ public class Stats
         closingPrice = Double.NaN;
     }
 
-    public void registerPeakHigh(double price, long time)
+    public synchronized void registerPeakHigh(double price, long time)
     {
+        if(openingPrice == Double.NaN)
+            setOpeningPrice(price);
         highPeak.registerPeakHigh(price, time);
     }
 
-    public void registerPeakLow(double price, long time)
+    public synchronized void registerPeakLow(double price, long time)
     {
+        if(openingPrice == Double.NaN)
+            setOpeningPrice(price);
         lowPeak.registerPeakLow(price, time);
     }
 
