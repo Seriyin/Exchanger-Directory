@@ -67,6 +67,7 @@ public class DirectoryStats
                                              .get(name)
                                              .getCompanies()
                                              .get(company);
+                        c.updateStats(tc);
                         return Response.accepted(UriBuilder.fromResource(DirectoryStats.class)
                                                            .build(name,company))
                                        .build();

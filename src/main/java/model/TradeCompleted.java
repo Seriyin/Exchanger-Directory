@@ -10,23 +10,20 @@ public class TradeCompleted
 {
     private String exchange;
     private String company;
-    private int quant;
-    private float total;
+    private double peak;
     private String user;
     private long timestamp;
 
     @JsonCreator
     public TradeCompleted(@JsonProperty("exchange") String exchange,
                           @JsonProperty("company") String company,
-                          @JsonProperty("quant") int quant,
-                          @JsonProperty("total") float total,
+                          @JsonProperty("peak") double peak,
                           @JsonProperty("user") String user,
                           @JsonProperty("timestamp") long timestamp)
     {
         this.exchange = exchange;
         this.company = company;
-        this.quant = quant;
-        this.total = total;
+        this.peak = peak;
         this.user = user;
         this.timestamp = timestamp;
     }
@@ -44,15 +41,9 @@ public class TradeCompleted
     }
 
     @JsonProperty
-    public int getQuant()
+    public double getPeak()
     {
-        return quant;
-    }
-
-    @JsonProperty
-    public float getTotal()
-    {
-        return total;
+        return peak;
     }
 
     @JsonProperty

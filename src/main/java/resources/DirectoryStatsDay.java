@@ -1,7 +1,6 @@
 package resources;
 
 import io.dropwizard.servlets.assets.ResourceNotFoundException;
-import model.Company;
 import model.CompanyDay;
 import model.Exchanges;
 

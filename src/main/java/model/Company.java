@@ -78,13 +78,13 @@ public class Company
     {
         if(isLive()) {
             if (today.getHighPeak()
-                     .getPeakPricePerStock() > tc.getTotal() / tc.getQuant())
+                     .getPeakPricePerStock() > tc.getPeak())
             {
-                today.registerPeakLow(tc.getTotal() / tc.getQuant(), tc.getTimestamp());
+                today.registerPeakLow(tc.getPeak(), tc.getTimestamp());
             }
             else
             {
-                today.registerPeakHigh(tc.getTotal() / tc.getQuant(), tc.getTimestamp());
+                today.registerPeakHigh(tc.getPeak(), tc.getTimestamp());
             }
         }
     }
