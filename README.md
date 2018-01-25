@@ -1,4 +1,4 @@
-# Exchanger-Directory
+# Exchanger-Directory #
 
 Java financial exchange REST directory over [Dropwizard](www.dropwizard.io).
 
@@ -37,11 +37,11 @@ Directory must:
 
 ### Live-Monitoring ###
 
-For the current day [exchanges](https://github.com/Seriyin/Exchanger-Server#live-monitoring) will POST record highs and lows for trades as they happen during trading hours.
+For the current day [exchanges](https://github.com/Seriyin/Exchanger-Server#live-monitoring) will PUT record highs and lows for trades as they happen during trading hours.
 
 Directory must:
 
-- Keep a POST url available during trading hours per company listed for exchanges to use.
+- Keep a PUT url available during trading hours per company listed for exchanges to use.
 
 -----
 
