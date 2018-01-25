@@ -1,69 +1,92 @@
-exchanges:
-  PSI-3 :
-    online : false
-    name : PSI-3
-    at : null
-    companies :
-      SONAC :
-        name : SONAC
-        yesterday : null
-        today : null
-      JeriamoMarts :
-        name : JeriamoMarts
-        yesterday : null
-        today : null
-      MotaAngil :
-        name : MotaAngil
-        yesterday : null
-        today : null
-  DawJobes :
-    online : false
-    name : DawJobes
-    at : null
-    companies :
-      Arple :
-        name : Apple
-        yesterday : null
-        today : null
-      Samshung :
-        name : Samsung
-        yesterday : null
-        today : null
-      Geggle :
-        name : Geggle
-        yesterday : null
-        today : null
-  AsiaWest :
-    online : false
-    name : AsiaWest
-    at : null
-    companies :
-      RussiOil :
-        name : RussiOil
-        yesterday : null
-        today : null
-      IndiaGP :
-        name : IndiaGP
-        yesterday : null
-        today : null
-      ShenzenCorp :
-        name : ShenzenCorp
-        yesterday : null
-        today : null
-  AsiaEast :
-    online : false
-    name : AsiaEast
-    at : null
-    companies :
-      Nisun :
-        name : Nisun
-        yesterday : null
-        today : null
-      Tayato :
-        name : Tayato
-        yesterday : null
-        today : null
-      Nazta :
-        name : Nazta
-        yesterday : null
-        today : null
+exchanges: {
+  exchanges : {
+    PSI-3 : {
+      online : false,
+      name : PSI-3,
+      at : null,
+      companies : {
+        SONAC : {
+          name : SONAC,
+          yesterday : null,
+          today : null
+        },
+        JeriamoMarts : {
+          name : JeriamoMarts,
+          yesterday : null,
+          today : null
+        },
+        MotaAngil : {
+          name : MotaAngil,
+          yesterday : null,
+          today : null
+        }
+      }
+    },
+    DawJobes : {
+      online : false,
+      name : DawJobes,
+      at : null,
+      companies : {
+        Arple : {
+          name : Arple,
+          yesterday : null,
+          today : null
+        },
+        Samshung : {
+          name : Samshung,
+          yesterday : null,
+          today : null
+        },
+        Geggle : {
+          name : Geggle,
+          yesterday : null,
+          today : null
+        }
+      }
+    },
+    AsiaWest : {
+      online : false,
+      name : AsiaWest,
+      at : null,
+      companies : {
+        RussiOil : {
+          name : RussiOil,
+          yesterday : null,
+          today : null
+        },
+        IndiaGP : {
+          name : IndiaGP,
+          yesterday : null,
+          today : null
+        },
+        ShenzenCorp : {
+          name : ShenzenCorp,
+          yesterday : null,
+          today : null
+        }
+      }
+    },
+    AsiaEast : {
+      online : false,
+      name : AsiaEast,
+      at : null,
+      companies : {
+        Nisun : {
+          name : Nisun,
+          yesterday : null,
+          today : null
+        },
+        Tayato : {
+          name : Tayato,
+          yesterday : null,
+          today : null
+        },
+        Nazta : {
+          name : Nazta,
+          yesterday : null,
+          today : null
+        }
+      }
+    }
+  }
+}
