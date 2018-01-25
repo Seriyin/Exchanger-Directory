@@ -1,8 +1,8 @@
-package resources;
+package pt.um.exchanger.resources;
 
 import io.dropwizard.servlets.assets.ResourceNotFoundException;
-import model.CompanyDay;
-import model.Exchanges;
+import pt.um.exchanger.model.CompanyDay;
+import pt.um.exchanger.model.Exchanges;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * Get live-stats for one day (either current or yester).
  */
-@Path("/exchanges/{/name}{/company}{/day}")
+@Path("/exchanges/{name}/{company}/{day}")
 @Produces(MediaType.APPLICATION_JSON)
 public class DirectoryStatsDay
 {

@@ -1,7 +1,6 @@
-package resources;
+package pt.um.exchanger.resources;
 
-import model.Companies;
-import model.Exchange;
+import pt.um.exchanger.model.Companies;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

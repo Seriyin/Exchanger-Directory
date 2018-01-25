@@ -1,15 +1,15 @@
-package app;
+package pt.um.exchanger.app;
 
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import model.Companies;
-import model.Exchanges;
-import resources.*;
+import pt.um.exchanger.model.Companies;
+import pt.um.exchanger.model.Exchanges;
+import pt.um.exchanger.resources.*;
 
 /**
- * DirectoryApp registers Jersey resources and static asset bundles.
+ * DirectoryApp registers Jersey pt.um.exchanger.resources and static asset bundles.
  */
 public class DirectoryApp extends Application<DirectoryConfig>
 {

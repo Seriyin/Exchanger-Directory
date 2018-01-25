@@ -1,17 +1,16 @@
-package resources;
+package pt.um.exchanger.resources;
 
 import io.dropwizard.servlets.assets.ResourceNotFoundException;
-import model.Exchanges;
+import pt.um.exchanger.model.Exchanges;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.util.List;
 import java.util.Set;
 
 /**
  * A resource that handles GETting all companies traded in a given exchange.
  */
-@Path("/exchanges/{/name}/companies")
+@Path("/exchanges/{name}/companies")
 @Produces(MediaType.APPLICATION_JSON)
 public class DirectoryExchangeCompanies
 {

@@ -1,10 +1,10 @@
-package resources;
+package pt.um.exchanger.resources;
 
 import io.dropwizard.servlets.assets.ResourceNotFoundException;
-import model.Company;
-import model.Exchange;
-import model.Exchanges;
-import model.TradeCompleted;
+import pt.um.exchanger.model.Company;
+import pt.um.exchanger.model.Exchange;
+import pt.um.exchanger.model.Exchanges;
+import pt.um.exchanger.model.TradeCompleted;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -16,7 +16,7 @@ import javax.ws.rs.core.UriBuilder;
 /**
  * Gets the live-stats for a company's trading in a given exchange.
  */
-@Path("/exchanges/{/name}{/company}")
+@Path("/exchanges/{name}/{company}")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class DirectoryStats

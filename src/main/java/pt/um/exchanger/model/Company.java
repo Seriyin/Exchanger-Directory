@@ -1,10 +1,9 @@
-package model;
+package pt.um.exchanger.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.joda.time.DateTime;
 import org.joda.time.Interval;
-import org.joda.time.LocalDate;
 
 /**
  * A company need only have it's name, current and older statistical information ({@link Stats}) and whether it's currently live (means someone has traded on it for the current day).

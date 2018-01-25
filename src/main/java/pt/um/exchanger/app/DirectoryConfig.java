@@ -1,8 +1,8 @@
-package app;
+package pt.um.exchanger.app;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
-import model.Exchanges;
+import pt.um.exchanger.model.Exchanges;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
@@ -10,7 +10,6 @@ import org.hibernate.validator.constraints.NotEmpty;
  */
 public class DirectoryConfig extends Configuration
 {
-    @NotEmpty
     private Exchanges exchanges;
 
     @JsonProperty

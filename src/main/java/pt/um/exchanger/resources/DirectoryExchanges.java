@@ -1,8 +1,8 @@
-package resources;
+package pt.um.exchanger.resources;
 
 import io.dropwizard.servlets.assets.ResourceNotFoundException;
-import model.Address;
-import model.Exchanges;
+import pt.um.exchanger.model.Address;
+import pt.um.exchanger.model.Exchanges;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -11,7 +11,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
 import java.util.AbstractMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;

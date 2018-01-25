@@ -1,4 +1,4 @@
-package model;
+package pt.um.exchanger.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

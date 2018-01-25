@@ -1,9 +1,8 @@
-package model;
+package pt.um.exchanger.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
